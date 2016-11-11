@@ -4,8 +4,8 @@ COPY ./Proxy C:/Proxy
 
 RUN powershell -NoProfile -Command \
     Import-module IISAdministration; \
-    New-IISSite -Name "ReverseProxy" -PhysicalPath C:\Proxy -BindingInformation "*:60000:"
+    New-IISSite -Name "ReverseProxy" -PhysicalPath C:\Proxy -BindingInformation "*:58000:"
 
-EXPOSE 60000
+EXPOSE 58000
 
 ENTRYPOINT cmd
